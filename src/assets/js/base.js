@@ -10,7 +10,7 @@ import { baseURL } from './api'
 const httpService = axios.create({
   baseURL: baseURL,// 接口的域名地址
   timeout: 15000
-})
+});
 
 //请求拦截器
 httpService.interceptors.request.use(config=>{
