@@ -18,13 +18,20 @@
   },
   mounted(){
     //$axios对象中的baseURL未作配置
-    this.$axios.get(baseURL+"users").then(res=>{
-      console.log(res)
-    })
-//    let data={
-//      mobile:18826550532
-//    }
-//    this.getData({type:'get',url:'/mobile/code',params:data,succ:res=>{
+//    this.$axios.get(baseURL+"users").then(res=>{
+//      console.log(res)
+//    })
+    let data={
+      mobile:18826550532
+    }
+    let headers={
+      'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+      'x-user-token':'123'
+    }
+    this.getData({url:'/mobile/code',params:data,callback:res=>{
+       console.log(res)
+    }})
+//    this.getData({type:'get',url:'/mobile/code',params:data,ischeckcode:2,callback:res=>{
 //
 //    }})
   }
