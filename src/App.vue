@@ -22,6 +22,21 @@ export default {
   mounted(){
     let deviceWidth= document.documentElement.clientWidth
     document.documentElement.style.fontSize = (deviceWidth/3.75) + 'px';
+
+//    window.onpopstate = (e) => {
+//      let d = localStorage.getItem('allowBack')
+//      if (d === 'false') {
+//        console.log(e.target.location.hash)
+//        if (e.target.location.hash === '#/home1') { // 该路由为公众号首页配置的路由信息,如：/list
+//          const url = location.href.split('#')[0]
+//          if (url !== undefined) {
+//            //wxCloseWechatWin()
+//          }
+//        } else {
+//          history.go(1)
+//        }
+//      }
+//    }
   },
   computed:{
     isLoading(){

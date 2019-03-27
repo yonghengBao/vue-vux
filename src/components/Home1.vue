@@ -4,16 +4,24 @@
     主页面
     <router-link :to="name='Login' ">登录</router-link>
     <span class="icon-pause"></span>
+    <no-data usedType="3"></no-data>
+    <!--<div class="my-loading" v-transfer-dom >-->
+      <!--<loading :show="toastInfo.isShow" :text="toastInfo.text"></loading>-->
+    <!--</div>-->
+    <my-loading></my-loading>
+    <p>{{ 1553592829411 | dateFormat('YYYY-MM-DD HH:mm:ss') }}</p>
   </div>
 </template>
 
 <script>
   import { baseURL } from '@/assets/js/api.js'
   export default {
-  name: 'Home1',
   data () {
     return {
-      msg: ''
+      toastInfo:{
+        isShow:true,
+        text:"获取数据中..."
+      },
     }
   },
   mounted(){
@@ -40,4 +48,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .my-loading /deep/ .weui-mask_transparent{
+    background: rgba(0, 0, 0, 0.3);
+  }
 </style>
