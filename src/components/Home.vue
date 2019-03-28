@@ -17,9 +17,7 @@
     }
   },
   mounted(){
-    this.$http.get(baseURL+"users").then(res=>{
-      console.log(res)
-    })
+
   }
 }
 </script>

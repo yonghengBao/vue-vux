@@ -1,0 +1,7 @@
+
+/deep/ .weui-cells{margin-top: 0;font-size: .14rem;background-color: transparent;}
+/deep/ .weui-cells:before{height: 0;border: none;}
+/deep/ .weui-cells:after{height: 0;border: none;}
+.weui-cell{padding: .1rem .2rem}
+/deep/ .weui-input{width: 90%;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+/deep/ .weui-input::placeholder{color: #CFCFCF;font-size: .16rem;}

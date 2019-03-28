@@ -2,7 +2,7 @@
   <div id="app">
     <loading v-model="isLoading"></loading>
     <transition name="slide" mode="out-in">
-      <router-view></router-view>
+      <router-view v-wechat-title="$route.meta.title?$route.meta.title:'万千校园'"></router-view>
     </transition>
   </div>
 </template>
@@ -19,9 +19,12 @@ export default {
 
     }
   },
-  mounted(){
-    let deviceWidth= document.documentElement.clientWidth
+  created(){
+    let deviceWidth= document.documentElement.clientWidth;
     document.documentElement.style.fontSize = (deviceWidth/3.75) + 'px';
+  },
+  mounted(){
+
 
 //    window.onpopstate = (e) => {
 //      let d = localStorage.getItem('allowBack')
