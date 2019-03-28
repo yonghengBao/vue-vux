@@ -5,3 +5,10 @@
 .weui-cell{padding: .1rem .2rem}
 /deep/ .weui-input{width: 90%;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
 /deep/ .weui-input::placeholder{color: #CFCFCF;font-size: .16rem;}
+
+/*tabbar*/
+/deep/ .weui-tabbar{height: .5rem;background-color:#fff;}
+/deep/ .weui-tabbar__item{padding: .07rem 0 0;}
+/deep/ .weui-tabbar__icon{width: .2rem;height: .2rem;}
+/deep/ .weui-tabbar__label{font-size: .1rem;line-height: 2;color: #666}
+/deep/ .weui-tabbar__item.weui-bar__item_on .weui-tabbar__label{color: #24C678;}

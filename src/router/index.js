@@ -16,10 +16,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home1',
+      //redirect:{component: Home},
       meta:{allowBack: false,title:"首页"},
-      component: Login
-    }, {
+      component: Home
+    },{
       path: '/home',
       name: 'Home',
       meta:{allowBack: false,title:"首页"},

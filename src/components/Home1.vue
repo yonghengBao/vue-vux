@@ -5,10 +5,10 @@
     <router-link :to="name='Login' ">登录</router-link>
     <span class="icon-pause"></span>
     <no-data usedType="3"></no-data>
-    <!--<div class="my-loading" v-transfer-dom >-->
-      <!--<loading :show="toastInfo.isShow" :text="toastInfo.text"></loading>-->
-    <!--</div>-->
-    <my-loading></my-loading>
+    <div class="my-loading" v-transfer-dom >
+      <loading :show="toastInfo.isShow" :text="toastInfo.text" style="display: none"></loading>
+    </div>
+    <!--<my-loading></my-loading>-->
     <p>{{ 1553592829411 | dateFormat('YYYY-MM-DD HH:mm:ss') }}</p>
   </div>
 </template>
