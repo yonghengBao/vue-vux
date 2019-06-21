@@ -7,8 +7,8 @@
   </div>
 </template>
 
-<script>
-  import { Loading } from 'vux'
+<script type="text/ecmascript-6">
+  import { Loading} from 'vux'
 export default {
   name: 'App',
   components: {
@@ -16,34 +16,27 @@ export default {
   },
   data:function () {
     return{
-
     }
   },
   created(){
-    let deviceWidth= document.documentElement.clientWidth;
-    document.documentElement.style.fontSize = (deviceWidth/3.75) + 'px';
+    this.setDeviceWidth();
   },
-  mounted(){
-
-
-//    window.onpopstate = (e) => {
-//      let d = localStorage.getItem('allowBack')
-//      if (d === 'false') {
-//        console.log(e.target.location.hash)
-//        if (e.target.location.hash === '#/home1') { // 该路由为公众号首页配置的路由信息,如：/list
-//          const url = location.href.split('#')[0]
-//          if (url !== undefined) {
-//            //wxCloseWechatWin()
-//          }
-//        } else {
-//          history.go(1)
-//        }
-//      }
-//    }
+  mounted() {
+    window.onresize = () => {
+      return (() => {
+        this.setDeviceWidth();
+    })();
+    };
   },
   computed:{
     isLoading(){
       return this.$store.getters.isLoadingStatus;
+    }
+  },
+  methods:{
+    setDeviceWidth(){
+      let deviceWidth= document.documentElement.clientWidth;
+      document.documentElement.style.fontSize = (deviceWidth/3.75) + 'px';
     }
   }
 }

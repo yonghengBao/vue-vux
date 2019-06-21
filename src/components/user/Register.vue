@@ -4,7 +4,7 @@
       <img src="../../assets/images/user/user_logo.png" alt="">
     </div>
     <div class="box">
-      <wine-input ref="wine_input" v-for="(iteam,index) in inputList" :statu="iteam.statu" :key="index"></wine-input>
+      <wine-input ref="wine_input" v-for="(iteam,index) in inputList"  :statu="iteam.statu" :key="index"></wine-input>
       <x-button class="btn" :gradients="['#02D8D3', '#00D99B']" @click.native="enter">注 册</x-button>
     </div>
   </div>

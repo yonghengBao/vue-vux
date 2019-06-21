@@ -1,14 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const Home = () =>import ( '@/components/Home')
-const Home1 = () =>import ( '@/components/Home1')
-const Login = () =>import ( '@/components/user/Login')
-const Register = () =>import ( '@/components/user/Register')
-
-
-
-
-const NotFound = () =>import ( '@/components/error/404')
+const Home = () =>import ( '@/components/Home').then(vueIeam => { return vueIeam.default});
+const Home1 = () =>import ( '@/components/Home1').then(vueIeam => { return vueIeam.default});
+const Login = () =>import ( '@/components/user/Login').then(vueIeam => { return vueIeam.default});
+const Register = () =>import ( '@/components/user/Register').then(vueIeam => { return vueIeam.default});
+const NotFound = () =>import ( '@/components/error/404').then(vueIeam => { return vueIeam.default});
 
 Vue.use(Router)
 

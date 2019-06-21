@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import vuex from  'vuex'
 import axios from 'axios'//网络请求
-import VueWechatTitle from 'vue-wechat-title';
+import VueWechatTitle from 'vue-wechat-title';//微信公众号中标题
 
 import './assets/css/base.css'
 import '../static/style.css' //字体
@@ -68,7 +68,7 @@ router.beforeEach((to,from,next)=>{
 router.afterEach(to=>{
   setTimeout(()=>{
     store.commit('updateLoadingStatus',{isLoading:false})
-  },200)
+  },500)
 
 })
 
