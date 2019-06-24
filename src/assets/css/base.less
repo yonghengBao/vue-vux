@@ -1,19 +1,19 @@
 /**
 公共样式
 **/
-body, div, dl, dt, dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote，th,td{margin:0;padding:0;box-sizing: border-box}
+@import "../less/common_less";
+body, div, dl, dt, dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,button,textarea,p,blockquote，th,td,header, nav, section,aside,footer{margin:0;padding:0;box-sizing: border-box}
 ol,ul {list-style:none;}
 h1,h2,h3,h4,h5,h6{font-size:100%;}
 html {
   height: 100%;
 }
-
 body{
   height: 100%;
-  color: #333;
-  background-color: #F5F6F8;
-  font-family: '微软雅黑';
-  font-size: .14rem;
+  color: @font-color-base;
+  background-color: @bg-base;
+  font-family: 'Microsoft YaHei';
+  font-size: @font-size-base;
 }
 .clear:after{
   content:"";

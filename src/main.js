@@ -7,7 +7,7 @@ import vuex from  'vuex'
 import axios from 'axios'//网络请求
 import VueWechatTitle from 'vue-wechat-title';//微信公众号中标题
 
-import './assets/css/base.css'
+import './assets/css/base.less'
 import '../static/style.css' //字体
 import baseFn from './assets/js/base'
 import { cookie,
