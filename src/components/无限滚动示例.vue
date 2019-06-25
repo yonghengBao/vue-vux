@@ -1,7 +1,6 @@
 <template>
   <div>
     <x-header style="position: fixed;width: 100%"></x-header>
-    <!--<div class="testcon border-radius">less测试</div>-->
 
     <!--无限滚动 子组件自动处理数据-->
     <infinite  url="//hn.algolia.com/api/v1/search_by_date?tags=story" style="padding: .45rem 0 .1rem;" infType="1">
@@ -71,8 +70,8 @@
           page: this.page,
         },
       }).then(({data}) => {
-        //          if (data.hits.length) {
-        if (this.page<5) {
+        if (data.hits.length) {
+//        if (this.page<5) {
           this.page += 1;
 
           /***数据处理****/
@@ -93,13 +92,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-  @import "../assets/less/common_less.less";
-  .testcon{
-    width: @width;
-    height: @height;
-    background-color: @color;
-    margin-bottom: 5px;
-    .border-radius;
-    /*background-image: url("@{base-url}/images/bg.png");*/
-  };
+
 </style>

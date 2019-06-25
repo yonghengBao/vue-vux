@@ -1,10 +1,12 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+import FastClick from 'fastclick'
 import App from './App'
 import router from './router'
 import vuex from  'vuex'
 import axios from 'axios'//网络请求
+import InfiniteLoading from 'vue-infinite-loading';//无限滚动
 import VueWechatTitle from 'vue-wechat-title';//微信公众号中标题
 
 import './assets/css/base.less'
@@ -21,9 +23,8 @@ import NoData from '@/components/NoData'
 import MyLoading from '@/components/MyLoading'
 
 
-const FastClick = require('fastclick')
-FastClick.attach(document.body)
-Vue.config.productionTip = false
+
+
 
 Vue.prototype.$axios=axios;
 Vue.use(vuex);
@@ -31,6 +32,7 @@ Vue.use(baseFn);  //请求
 Vue.use(LoadingPlugin); //全局loading
 Vue.use(ToastPlugin); //全局toast
 Vue.use(VueWechatTitle);
+Vue.use(InfiniteLoading);
 //全局组件
 Vue.component('no-data',NoData)
 Vue.component('loading',Loading)
@@ -72,6 +74,9 @@ router.afterEach(to=>{
 
 })
 
+FastClick.attach(document.body)
+
+Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

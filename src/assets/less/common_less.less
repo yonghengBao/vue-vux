@@ -1,14 +1,8 @@
 //基础变量
+@base-url: "http://assets.fnord.com";//域名
 @font-color-base: #333;/*字体颜色*/
 @font-size-base:.14rem;/*字体大小*/
 @bg-base: #F5F6F8;/*背景颜色*/
-
-
-
-
-
-
-
 
 
 
@@ -16,6 +10,15 @@
 @width: 100%;
 @height: 50px;
 @color: red;
-.border-radius(@radius:0.03rem){
+.border-radius(@radius:0.03rem){//倒角：默认0.03rem
   border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
 }
+//阴影
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+
