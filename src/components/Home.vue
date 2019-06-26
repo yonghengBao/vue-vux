@@ -1,6 +1,7 @@
 <template>
   <div>
     <x-header style="position: fixed;width: 100%"></x-header>
+    <router-link :to="{name:'Login'}" style="margin-top: 50px;display: inline-block">登录</router-link>
     <!--<div class="testcon border-radius">less测试</div>-->
 
     <!--无限滚动 子组件自动处理数据-->
@@ -20,7 +21,7 @@
       <!--</template>-->
     <!--</infinite>-->
 
-    <router-link :to="{name:'Login'}">登录</router-link>
+
     <tabbar style="position: fixed">
       <tabbar-item selected>
         <img slot="icon" src="../assets/images/home/bar／tab_home_pre@2x1.png" srcset="../assets/images/home/bar／tab_home_pre@2x1.png 2x,../assets/images/home/bar／tab_home_pre@2x1.png 3x">

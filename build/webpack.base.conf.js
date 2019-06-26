@@ -4,6 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vuxLoader = require('vux-loader')
 const vueLoaderConfig = require('./vue-loader.conf')
+const autoprefixer=require("autoprefixer")
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -45,7 +46,10 @@ const webpackConfig = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueLoaderConfig
+        options: {
+          vueLoaderConfig,
+          postcss:[require('autoprefixer')({ browsers: ['last 10 Chrome versions', 'last 5 Firefox versions', 'Safari >= 6', 'ie> 8'] })]
+        }
       },
       {
         test: /\.js$/,
